@@ -1,0 +1,28 @@
+{
+  "name": "Rental_Kiosk",
+  "version": "0.0.1",
+  "description": "Rental Kiosk server",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Benjamin Cuson",
+  "license": "ISC",
+  "dependencies" : {
+      "express": "~4.13.3", 
+      "socket.io": "~1.4.4",
+      "body-parser": "~1.14.2",
+      "angular-route": "~1.4.8",
+      "nodemailer": "~0.7.1",
+      "angular-ui-calendar": "~1.0.2",
+      "angular-ui-router": "~0.2.18",
+      "ng-cookies": "~1.0.2",
+      "moment":"2.13.0",
+      "forever":"0.15.2",
+      "textangular":"*",
+      "multer": "^1.1.0",
+      "angular-utils-pagination":"*",
+      "mysql":"2.13.0"
+    }
+}

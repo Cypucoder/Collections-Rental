@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./assets/css/IT.css">
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.2.0/socket.io.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+        <script src="./assets/angular/code.js"></script>
+        
+    </head>
+    <body ng-app="myApp" ng-controller="data_set">
+        <nav role="navigation" class="navbar navbar-default" style="position: fixed; top: 0; width: 100%; z-index: 5;">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Rental system</a>
+            </div>
+            <!-- Collection of nav links and other content for toggling -->
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://10.66.5.27:3004/" id="NavN">Groups</a></li>
+                    <li><a href="http://10.66.5.27:3004/List.html" id="NavC">List</a></li>
+                    <li><a href="http://10.66.5.27:3004/CheckIn.html" id="NavN">Check In</a></li>
+                    <li><a href="http://10.66.5.27:3004/CheckOut.html" id="NavN">Check Out</a></li>
+                    <li class="active"><a href="http://10.66.5.27:3004/AddItem.html" id="NavN">Add Item</a></li>
+                    <!--<li class="active"><a href="#/central" id="NavC">Central</a></li>
+                    <li><a href="#/north" id="NavN">North</a></li>
+                    <li><a href="#/south" id="NavS">South</a></li>
+                    <li><a href="#/wr" id="NavWR">West River</a></li>
+                    <li><a href="#/keystone" id="NavK">Keystone</a></li>
+                    <li><a href="#/bookmobile" id="NavB">Bookmobile</a></li>-->
+                    <!--<li><a href="#/mp" id="NavB">My Projects</a></li>-->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li><a href="#">Login</a></li>-->
+                </ul>
+            </div>
+        </nav>
+        <div style="margin-top:100px;"></div>
+        <ng-form id="Item" name="Item" action="">
+            <div class="col-xs-12"><label>Upload Image: <input type="file" name="file" accept="image/*" fileread="Item.nFile"></label></div>
+            <div class="col-xs-12"><img ng-src="{{Item.nFile}}" style="max-width:160px;"/></div>
+            <div class="col-xs-12"><label>Item ID: <input type="text" ng-model="Item.v_ID"/></label></div>
+            <div class="col-xs-12"><label>Description: <input type="text" ng-model="Item.v_Desc"/></label></div>
+            <div class="col-xs-12"><label>Group: <input type="text" ng-model="Item.v_Group"/></label></div>
+            <div class="col-xs-12"><label>Manufacturer: <input type="text" ng-model="Item.v_Manufacturer"/></label></div>
+            <div class="col-xs-12"><label>Barcode: <input type="text" ng-model="Item.v_Barcode"/></label></div>
+            <div class="col-xs-12"><input type="submit" ng-click="createItem(Item);" ng-model="Item.ItemSend" id="send"/></div>
+            {{response}}
+        </ng-form>
+    </body>
+    <footer>
+        
+    </footer>
+</html>
